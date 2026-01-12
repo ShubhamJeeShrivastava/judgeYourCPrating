@@ -20,6 +20,7 @@
 body {
   margin: 0;
   display: flex;
+  /* Restored to flex if that was preferred, or block. The original used flex/place-items center which might centers vertically. Let's check App.jsx container. App.jsx has min-h-screen which handles layout. Flex on body usually centers #root. The original CSS had display:flex; place-items:center. */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
