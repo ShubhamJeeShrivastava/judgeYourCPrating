@@ -1,0 +1,809 @@
+Testing spawn of cc_scraper.py...
+STDOUT Chunk: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "stars": "3\u2605",
+  "globalRank": "5891",
+  "countryRank": "5005",
+  "history": [
+    {
+      "contestName": "Starters 105 Division 4 (Rated)",
+      "rating": 1049,
+      "rank": "6415",
+      "date": "2023-10-25"
+    },
+    {
+      "contestName": "Starters 107 Division 4 (Rated)",
+      "rating": 1094,
+      "rank": "13312",
+      "date": "2023-11-8"
+    },
+    {
+      "contestName": "Starters 108 Division 4 (Rated)",
+      "rating": 1185,
+      "rank": "6633",
+      "date": "2023-11-15"
+    },
+    {
+      "contestName": "Starters 109 Division 4 (Rated)",
+      "rating": 1226,
+      "rank": "7874",
+      "date": "2023-11-22"
+    },
+    {
+      "contestName": "Starters 110 Divison 4 (Rated)",
+      "rating": 1281,
+      "rank": "5214",
+      "date": "2023-11-29"
+    },
+    {
+      "contestName": "Starters 111 Division 4 (Rated)",
+      "rating": 1339,
+      "rank": "2625",
+      "date": "2023-12-6"
+    },
+    {
+      "contestName": "Starters 113 Division 4 (Rated)",
+      "rating": 1315,
+      "rank": "11531",
+      "date": "2023-12-20"
+    },
+    {
+      "contestName": "Starters 116 Division 4 (Rated)",
+      "rating": 1366,
+      "rank": "2266",
+      "date": "2024-1-10"
+    },
+    {
+      "contestName": "Starters 117 Division 4 (Rated)",
+      "rating": 1426,
+      "rank": "892",
+      "date": "2024-1-17"
+    },
+    {
+      "contestName": "Starters 118 Division 4 (Rated)",
+      "rating": 1482,
+      "rank": "1054",
+      "date": "2024-1-24"
+    },
+    {
+      "contestName": "Starters 119 Division 3 (Rated)",
+      "rating": 1478,
+      "rank": "3000",
+      "date": "2024-1-31"
+    },
+    {
+      "contestName": "Starters 121 Division 3 (Rated)",
+      "rating": 1470,
+      "rank": "3369",
+      "date": "2024-2-14"
+    },
+    {
+      "contestName": "Starters 122 Division 3 (Rated)",
+      "rating": 1502,
+      "rank": "1368",
+      "date": "2024-2-21"
+    },
+    {
+      "contestName": "Starters 123 Division 3 (Rated)",
+      "rating": 1500,
+      "rank": "3003",
+      "date": "2024-2-28"
+    },
+    {
+      "contestName": "Starters 124 Division 3 (Rated)",
+      "rating": 1501,
+      "rank": "3110",
+      "date": "2024-3-6"
+    },
+    {
+      "contestName": "Starters 126 Division 3 (Rated)",
+      "rating": 1471,
+      "rank": "4260",
+      "date": "2024-3-20"
+    },
+    {
+      "contestName": "Starters 127 Division 3",
+      "rating": 1444,
+      "rank": "4162",
+      "date": "2024-3-27"
+    },
+    {
+      "contestName": "Starters 128 Division 3 (Rated)",
+      "rating": 1466,
+      "rank": "1796",
+      "date": "2024-4-3"
+    },
+    {
+      "contestName": "Starters 129 Division 3 (Rated)",
+      "rating": 1487,
+      "rank": "1576",
+      "date": "2024-4-10"
+    },
+    {
+      "contestName": "Starters 130 Division 3 (Rated)",
+      "rating": 1529,
+      "rank": "236",
+      "date": "2024-4-17"
+    },
+    {
+      "contestName": "Starters 131 Division 3 (Rated)",
+      "rating": 1523,
+      "rank": "2213",
+      "date": "2024-4-24"
+    },
+    {
+      "contestName": "Starters 135 Division 3 (Rated)",
+      "rating": 1527,
+      "rank": "1787",
+      "date": "2024-5-22"
+    },
+    {
+      "contestName": "Starters 136 Division 3 ( Rated )",
+      "rating": 1559,
+      "rank": "590",
+      "date": "2024-5-29"
+    },
+    {
+      "contestName": "Starters 137 Division 3 (Rated)",
+      "rating": 1544,
+      "rank": "2558",
+      "date": "2024-6-5"
+    },
+    {
+      "contestName": "Starters 138 Division 3 (Rated)",
+      "rating": 1586,
+      "rank": "196",
+      "date": "2024-6-12"
+    },
+    {
+      "contestName": "Starters 140 Division 3 (Rated)",
+      "rating": 1590,
+      "rank": "1538",
+      "date": "2024-6-26"
+    },
+    {
+      "contestName": "Starters 141 Division 3 (Rated)",
+      "rating": 1630,
+      "rank": "286",
+      "date": "2024-7-3"
+    },
+    {
+      "contestName": "Starters 142 Division 2 (Rated)",
+      "rating": 1604,
+      "rank": "2125",
+      "date": "2024-7-10"
+    },
+    {
+      "contestName": "Starters 143 Division 2 (Rated)",
+      "rating": 1577,
+      "rank": "1826",
+      "date": "2024-7-17"
+    },
+    {
+      "contestName": "Starters 144 Division 3 (Rated)",
+      "rating": 1616,
+      "rank": "328",
+      "date": "2024-7-24"
+    },
+    {
+      "contestName": "Starters 145 Division 2 (Rated)",
+      "rating": 1608,
+      "rank": "1580",
+      "date": "2024-7-31"
+    },
+    {
+      "contestName": "Starters 146 Division 2 (Rated till 5 stars)",
+      "rating": 1633,
+      "rank": "1010",
+      "date": "2024-8-7"
+    },
+    {
+      "contestName": "Starters 147 Division 2 (Rated till 5 stars)",
+      "rating": 1619,
+      "rank": "1710",
+      "date": "2024-8-14"
+    },
+    {
+      "contestName": "Starters 148 Division 2 (Rated)",
+      "rating": 1631,
+      "rank": "1182",
+      "date": "2024-8-21"
+    },
+    {
+      "contestName": "Starters 150 (Rated)",
+      "rating": 1633,
+      "rank": "1460",
+      "date": "2024-9-4"
+    },
+    {
+      "contestName": "Starters 151 (rated)",
+      "rating": 1635,
+      "rank": "1151",
+      "date": "2024-9-11"
+    },
+    {
+      "contestName": "Starters 152 (Rated)",
+      "rating": 1660,
+      "rank": "967",
+      "date": "2024-9-18"
+    },
+    {
+      "contestName": "Starters 153 (Rated)",
+      "rating": 1683,
+      "rank": "700",
+      "date": "2024-9-25"
+    },
+    {
+      "contestName": "Starters 154 (Rated)",
+      "rating": 1677,
+      "rank": "1455",
+      "date": "2024-10-2"
+    },
+    {
+      "contestName": "Starters 156 (Rated)",
+      "rating": 1694,
+      "rank": "921",
+      "date": "2024-10-16"
+    },
+    {
+      "contestName": "Starters 160 (Rated)",
+      "rating": 1702,
+      "rank": "684",
+      "date": "2024-11-13"
+    },
+    {
+      "contestName": "Starters 162 (Rated)",
+      "rating": 1710,
+      "rank": "510",
+      "date": "2024-11-27"
+    },
+    {
+      "contestName": "Starters 163 (Rated)",
+      "rating": 1717,
+      "rank": "642",
+      "date": "2024-12-4"
+    },
+    {
+      "contestName": "Starters 164 (Rated)",
+      "rating": 1737,
+      "rank": "494",
+      "date": "2024-12-11"
+    },
+    {
+      "contestName": "Starters 165 (Rated)",
+      "rating": 1706,
+      "rank": "1670",
+      "date": "2024-12-18"
+    },
+    {
+      "contestName": "Starters 166 (Rated)",
+      "rating": 1705,
+      "rank": "1036",
+      "date": "2024-12-25"
+    },
+    {
+      "contestName": "Starters 167 (Rated)",
+      "rating": 1686,
+      "rank": "1230",
+      "date": "2025-1-1"
+    },
+    {
+      "contestName": "Starters 169 (Rated)",
+      "rating": 1684,
+      "rank": "1168",
+      "date": "2025-1-15"
+    },
+    {
+      "contestName": "Starters 170 (Rated)",
+      "rating": 1697,
+      "rank": "840",
+      "date": "2025-1-22"
+    },
+    {
+      "contestName": "Starters 171 (Rated)",
+      "rating": 1713,
+      "rank": "917",
+      "date": "2025-1-29"
+    },
+    {
+      "contestName": "Starters 173 (Rated upto < 2700)",
+      "rating": 1721,
+      "rank": "1322",
+      "date": "2025-2-12"
+    },
+    {
+      "contestName": "Starters 175 (Rated)",
+      "rating": 1703,
+      "rank": "1180",
+      "date": "2025-2-26"
+    },
+    {
+      "contestName": "Starters 182 (Rated)",
+      "rating": 1717,
+      "rank": "613",
+      "date": "2025-4-16"
+    },
+    {
+      "contestName": "Starters 183 (Rated)",
+      "rating": 1735,
+      "rank": "436",
+      "date": "2025-4-23"
+    },
+    {
+      "contestName": "Starters 188 (Rated)",
+      "rating": 1761,
+      "rank": "377",
+      "date": "2025-5-28"
+    },
+    {
+      "contestName": "Starters 189 (Rated)",
+      "rating": 1742,
+      "rank": "1233",
+      "date": "2025-6-4"
+    },
+    {
+      "contestName": "Starters 190 (Rated)",
+      "rating": 1754,
+      "rank": "732",
+      "date": "2025-6-11"
+    },
+    {
+      "contestName": "Starters 191 (Rated)",
+      "rating": 1769,
+      "rank": "646",
+      "date": "2025-6-18"
+    },
+    {
+      "contestName": "Starters 196 (Rated)",
+      "rating": 1779,
+      "rank": "503",
+      "date": "2025-7-23"
+    },
+    {
+      "contestName": " Starters 197 (Rated)",
+      "rating": 1791,
+      "rank": "493",
+      "date": "2025-7-30"
+    },
+    {
+      "contestName": "Starters 199 (Rated)",
+      "rating": 1810,
+      "rank": "357",
+      "date": "2025-8-13"
+    },
+    {
+      "contestName": "Starters 204 (Rated)",
+      "rating": 1807,
+      "rank": "340",
+      "date": "2025-9-17"
+    },
+    {
+      "contestName": "Starters 213 (Rated)",
+      "rating": 1788,
+      "rank": "656",
+      "date": "2025-11-19"
+    },
+    {
+      "contestName": "Starters 217 (Rated)",
+      "rating": 1765,
+      "rank": "944",
+      "date": "2025-12-17"
+    },
+    {
+      "contestName": "Starters 218 (Rated)",
+      "rating": 1781,
+      "rank": "391",
+      "date": "2025-12-24"
+    }
+  ]
+}
+
+Child process exited with code 0
+--- FINAL STDOUT ---
+{
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "stars": "3\u2605",
+  "globalRank": "5891",
+  "countryRank": "5005",
+  "history": [
+    {
+      "contestName": "Starters 105 Division 4 (Rated)",
+      "rating": 1049,
+      "rank": "6415",
+      "date": "2023-10-25"
+    },
+    {
+      "contestName": "Starters 107 Division 4 (Rated)",
+      "rating": 1094,
+      "rank": "13312",
+      "date": "2023-11-8"
+    },
+    {
+      "contestName": "Starters 108 Division 4 (Rated)",
+      "rating": 1185,
+      "rank": "6633",
+      "date": "2023-11-15"
+    },
+    {
+      "contestName": "Starters 109 Division 4 (Rated)",
+      "rating": 1226,
+      "rank": "7874",
+      "date": "2023-11-22"
+    },
+    {
+      "contestName": "Starters 110 Divison 4 (Rated)",
+      "rating": 1281,
+      "rank": "5214",
+      "date": "2023-11-29"
+    },
+    {
+      "contestName": "Starters 111 Division 4 (Rated)",
+      "rating": 1339,
+      "rank": "2625",
+      "date": "2023-12-6"
+    },
+    {
+      "contestName": "Starters 113 Division 4 (Rated)",
+      "rating": 1315,
+      "rank": "11531",
+      "date": "2023-12-20"
+    },
+    {
+      "contestName": "Starters 116 Division 4 (Rated)",
+      "rating": 1366,
+      "rank": "2266",
+      "date": "2024-1-10"
+    },
+    {
+      "contestName": "Starters 117 Division 4 (Rated)",
+      "rating": 1426,
+      "rank": "892",
+      "date": "2024-1-17"
+    },
+    {
+      "contestName": "Starters 118 Division 4 (Rated)",
+      "rating": 1482,
+      "rank": "1054",
+      "date": "2024-1-24"
+    },
+    {
+      "contestName": "Starters 119 Division 3 (Rated)",
+      "rating": 1478,
+      "rank": "3000",
+      "date": "2024-1-31"
+    },
+    {
+      "contestName": "Starters 121 Division 3 (Rated)",
+      "rating": 1470,
+      "rank": "3369",
+      "date": "2024-2-14"
+    },
+    {
+      "contestName": "Starters 122 Division 3 (Rated)",
+      "rating": 1502,
+      "rank": "1368",
+      "date": "2024-2-21"
+    },
+    {
+      "contestName": "Starters 123 Division 3 (Rated)",
+      "rating": 1500,
+      "rank": "3003",
+      "date": "2024-2-28"
+    },
+    {
+      "contestName": "Starters 124 Division 3 (Rated)",
+      "rating": 1501,
+      "rank": "3110",
+      "date": "2024-3-6"
+    },
+    {
+      "contestName": "Starters 126 Division 3 (Rated)",
+      "rating": 1471,
+      "rank": "4260",
+      "date": "2024-3-20"
+    },
+    {
+      "contestName": "Starters 127 Division 3",
+      "rating": 1444,
+      "rank": "4162",
+      "date": "2024-3-27"
+    },
+    {
+      "contestName": "Starters 128 Division 3 (Rated)",
+      "rating": 1466,
+      "rank": "1796",
+      "date": "2024-4-3"
+    },
+    {
+      "contestName": "Starters 129 Division 3 (Rated)",
+      "rating": 1487,
+      "rank": "1576",
+      "date": "2024-4-10"
+    },
+    {
+      "contestName": "Starters 130 Division 3 (Rated)",
+      "rating": 1529,
+      "rank": "236",
+      "date": "2024-4-17"
+    },
+    {
+      "contestName": "Starters 131 Division 3 (Rated)",
+      "rating": 1523,
+      "rank": "2213",
+      "date": "2024-4-24"
+    },
+    {
+      "contestName": "Starters 135 Division 3 (Rated)",
+      "rating": 1527,
+      "rank": "1787",
+      "date": "2024-5-22"
+    },
+    {
+      "contestName": "Starters 136 Division 3 ( Rated )",
+      "rating": 1559,
+      "rank": "590",
+      "date": "2024-5-29"
+    },
+    {
+      "contestName": "Starters 137 Division 3 (Rated)",
+      "rating": 1544,
+      "rank": "2558",
+      "date": "2024-6-5"
+    },
+    {
+      "contestName": "Starters 138 Division 3 (Rated)",
+      "rating": 1586,
+      "rank": "196",
+      "date": "2024-6-12"
+    },
+    {
+      "contestName": "Starters 140 Division 3 (Rated)",
+      "rating": 1590,
+      "rank": "1538",
+      "date": "2024-6-26"
+    },
+    {
+      "contestName": "Starters 141 Division 3 (Rated)",
+      "rating": 1630,
+      "rank": "286",
+      "date": "2024-7-3"
+    },
+    {
+      "contestName": "Starters 142 Division 2 (Rated)",
+      "rating": 1604,
+      "rank": "2125",
+      "date": "2024-7-10"
+    },
+    {
+      "contestName": "Starters 143 Division 2 (Rated)",
+      "rating": 1577,
+      "rank": "1826",
+      "date": "2024-7-17"
+    },
+    {
+      "contestName": "Starters 144 Division 3 (Rated)",
+      "rating": 1616,
+      "rank": "328",
+      "date": "2024-7-24"
+    },
+    {
+      "contestName": "Starters 145 Division 2 (Rated)",
+      "rating": 1608,
+      "rank": "1580",
+      "date": "2024-7-31"
+    },
+    {
+      "contestName": "Starters 146 Division 2 (Rated till 5 stars)",
+      "rating": 1633,
+      "rank": "1010",
+      "date": "2024-8-7"
+    },
+    {
+      "contestName": "Starters 147 Division 2 (Rated till 5 stars)",
+      "rating": 1619,
+      "rank": "1710",
+      "date": "2024-8-14"
+    },
+    {
+      "contestName": "Starters 148 Division 2 (Rated)",
+      "rating": 1631,
+      "rank": "1182",
+      "date": "2024-8-21"
+    },
+    {
+      "contestName": "Starters 150 (Rated)",
+      "rating": 1633,
+      "rank": "1460",
+      "date": "2024-9-4"
+    },
+    {
+      "contestName": "Starters 151 (rated)",
+      "rating": 1635,
+      "rank": "1151",
+      "date": "2024-9-11"
+    },
+    {
+      "contestName": "Starters 152 (Rated)",
+      "rating": 1660,
+      "rank": "967",
+      "date": "2024-9-18"
+    },
+    {
+      "contestName": "Starters 153 (Rated)",
+      "rating": 1683,
+      "rank": "700",
+      "date": "2024-9-25"
+    },
+    {
+      "contestName": "Starters 154 (Rated)",
+      "rating": 1677,
+      "rank": "1455",
+      "date": "2024-10-2"
+    },
+    {
+      "contestName": "Starters 156 (Rated)",
+      "rating": 1694,
+      "rank": "921",
+      "date": "2024-10-16"
+    },
+    {
+      "contestName": "Starters 160 (Rated)",
+      "rating": 1702,
+      "rank": "684",
+      "date": "2024-11-13"
+    },
+    {
+      "contestName": "Starters 162 (Rated)",
+      "rating": 1710,
+      "rank": "510",
+      "date": "2024-11-27"
+    },
+    {
+      "contestName": "Starters 163 (Rated)",
+      "rating": 1717,
+      "rank": "642",
+      "date": "2024-12-4"
+    },
+    {
+      "contestName": "Starters 164 (Rated)",
+      "rating": 1737,
+      "rank": "494",
+      "date": "2024-12-11"
+    },
+    {
+      "contestName": "Starters 165 (Rated)",
+      "rating": 1706,
+      "rank": "1670",
+      "date": "2024-12-18"
+    },
+    {
+      "contestName": "Starters 166 (Rated)",
+      "rating": 1705,
+      "rank": "1036",
+      "date": "2024-12-25"
+    },
+    {
+      "contestName": "Starters 167 (Rated)",
+      "rating": 1686,
+      "rank": "1230",
+      "date": "2025-1-1"
+    },
+    {
+      "contestName": "Starters 169 (Rated)",
+      "rating": 1684,
+      "rank": "1168",
+      "date": "2025-1-15"
+    },
+    {
+      "contestName": "Starters 170 (Rated)",
+      "rating": 1697,
+      "rank": "840",
+      "date": "2025-1-22"
+    },
+    {
+      "contestName": "Starters 171 (Rated)",
+      "rating": 1713,
+      "rank": "917",
+      "date": "2025-1-29"
+    },
+    {
+      "contestName": "Starters 173 (Rated upto < 2700)",
+      "rating": 1721,
+      "rank": "1322",
+      "date": "2025-2-12"
+    },
+    {
+      "contestName": "Starters 175 (Rated)",
+      "rating": 1703,
+      "rank": "1180",
+      "date": "2025-2-26"
+    },
+    {
+      "contestName": "Starters 182 (Rated)",
+      "rating": 1717,
+      "rank": "613",
+      "date": "2025-4-16"
+    },
+    {
+      "contestName": "Starters 183 (Rated)",
+      "rating": 1735,
+      "rank": "436",
+      "date": "2025-4-23"
+    },
+    {
+      "contestName": "Starters 188 (Rated)",
+      "rating": 1761,
+      "rank": "377",
+      "date": "2025-5-28"
+    },
+    {
+      "contestName": "Starters 189 (Rated)",
+      "rating": 1742,
+      "rank": "1233",
+      "date": "2025-6-4"
+    },
+    {
+      "contestName": "Starters 190 (Rated)",
+      "rating": 1754,
+      "rank": "732",
+      "date": "2025-6-11"
+    },
+    {
+      "contestName": "Starters 191 (Rated)",
+      "rating": 1769,
+      "rank": "646",
+      "date": "2025-6-18"
+    },
+    {
+      "contestName": "Starters 196 (Rated)",
+      "rating": 1779,
+      "rank": "503",
+      "date": "2025-7-23"
+    },
+    {
+      "contestName": " Starters 197 (Rated)",
+      "rating": 1791,
+      "rank": "493",
+      "date": "2025-7-30"
+    },
+    {
+      "contestName": "Starters 199 (Rated)",
+      "rating": 1810,
+      "rank": "357",
+      "date": "2025-8-13"
+    },
+    {
+      "contestName": "Starters 204 (Rated)",
+      "rating": 1807,
+      "rank": "340",
+      "date": "2025-9-17"
+    },
+    {
+      "contestName": "Starters 213 (Rated)",
+      "rating": 1788,
+      "rank": "656",
+      "date": "2025-11-19"
+    },
+    {
+      "contestName": "Starters 217 (Rated)",
+      "rating": 1765,
+      "rank": "944",
+      "date": "2025-12-17"
+    },
+    {
+      "contestName": "Starters 218 (Rated)",
+      "rating": 1781,
+      "rank": "391",
+      "date": "2025-12-24"
+    }
+  ]
+}
+
+--- FINAL STDERR ---
+

@@ -12,6 +12,9 @@ function App() {
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
 
+    // 'cf', 'lc', 'cc'
+    const [activeTab, setActiveTab] = useState('cf')
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (!cfId && !lcId && !ccId) {
@@ -29,30 +32,49 @@ function App() {
             });
 
             const result = response.data;
+            const cfData = result.cf;
+            const ccData = result.cc;
 
-            // Transform backend data to frontend format
-            // Primarily using Codeforces data for now as others are placeholders
-            if (result.cf && result.cf.status === 'success') {
-                const cfData = result.cf;
+            let historyCf = [];
+            let historyCc = [];
 
-                // Transform history for graph
-                const history = cfData.history.map(h => ({
-                    name: h.contestName, // Simplified for chart
+            // Process CF History
+            if (cfData && cfData.status === 'success') {
+                historyCf = cfData.history.map(h => ({
+                    name: h.contestName,
                     rating: h.newRating,
                     date: new Date(h.updateTime * 1000).toLocaleDateString()
-                })).slice(-15); // Show last 15 contests
-
-                setData({
-                    message: "Data Loaded",
-                    history: history,
-                    cfRating: cfData.rating,
-                    lcRating: "N/A", // Placeholder
-                    verdict: getVerdict(cfData.maxRank),
-                    topTags: ["Implementation", "Math", "Greedy"] // Mock tags for now as API doesn't return them directly in this endpoint
-                });
-            } else {
-                setError("Could not fetch data for the provided handles.");
+                })).slice(-15);
             }
+
+            // Process CC History
+            if (ccData && ccData.status === 'success' && ccData.history) {
+                historyCc = ccData.history.map(h => ({
+                    name: h.contestName,
+                    rating: h.rating,
+                    date: h.date
+                })).slice(-15);
+            }
+
+            // Set Data
+            setData({
+                message: "Data Loaded",
+                history: {
+                    cf: historyCf,
+                    cc: historyCc,
+                    lc: [] // Placeholder
+                },
+                cfRating: cfData?.status === 'success' ? cfData.rating : 'N/A',
+                ccRating: ccData?.status === 'success' ? ccData.rating : 'N/A',
+                ccStars: ccData?.status === 'success' ? ccData.stars : '',
+                lcRating: "N/A", // Placeholder
+                verdict: getVerdict(cfData?.maxRank),
+                topTags: ["Implementation", "Math", "Greedy"]
+            });
+
+            // Set Default Tab
+            if (cfData?.status === 'success') setActiveTab('cf');
+            else if (ccData?.status === 'success') setActiveTab('cc');
 
         } catch (err) {
             console.error(err);
@@ -65,6 +87,20 @@ function App() {
     const getVerdict = (rank) => {
         if (!rank) return "Unrated";
         return rank.charAt(0).toUpperCase() + rank.slice(1);
+    }
+
+    const getCurrentChartData = () => {
+        if (!data) return [];
+        return data.history[activeTab] || [];
+    }
+
+    const getChartColor = () => {
+        switch (activeTab) {
+            case 'cf': return '#6366f1'; // Indigo
+            case 'cc': return '#a855f7'; // Purple
+            case 'lc': return '#eab308'; // Yellow
+            default: return '#6366f1';
+        }
     }
 
     return (
@@ -94,7 +130,7 @@ function App() {
 
             <main className={`max-w-7xl mx-auto px-6 ${data ? 'py-8' : 'py-12'} relative transition-all duration-500`}>
 
-                {/* Hero Text - Fades out when data is loaded */}
+                {/* Hero Text */}
                 <AnimatePresence>
                     {!data && (
                         <motion.div
@@ -114,7 +150,7 @@ function App() {
                     )}
                 </AnimatePresence>
 
-                {/* Input Form - Transitions to corner */}
+                {/* Input Form */}
                 <motion.div
                     layout
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -122,12 +158,12 @@ function App() {
                         w-full mx-auto backdrop-blur-sm border border-slate-800 shadow-2xl bg-slate-900/50 rounded-2xl
                         ${data
                             ? 'max-w-full flex-row p-4 mb-8 sticky top-20 z-40' // Compact State
-                            : 'max-w-3xl p-2 mb-16' // Hero State (wider for 3 inputs)
+                            : 'max-w-3xl p-2 mb-16' // Hero State
                         }
                     `}
                 >
                     <form onSubmit={handleSubmit} className={`flex gap-2 ${data ? 'flex-row items-center w-full' : 'flex-col md:flex-row'}`}>
-                        {/* Codeforces Input */}
+                        {/* Codeforces */}
                         <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
                             <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
                             <input
@@ -139,7 +175,7 @@ function App() {
                             />
                         </div>
 
-                        {/* LeetCode Input */}
+                        {/* LeetCode */}
                         <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
                             <Code2 className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
                             <input
@@ -151,7 +187,7 @@ function App() {
                             />
                         </div>
 
-                        {/* CodeChef Input */}
+                        {/* CodeChef */}
                         <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
                             <Terminal className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
                             <input
@@ -185,6 +221,7 @@ function App() {
                             transition={{ delay: 0.2 }}
                             className="space-y-6"
                         >
+                            {/* Performance Overview */}
                             <div className="flex items-center justify-between mb-4">
                                 <h2 className="text-xl font-semibold text-white flex items-center gap-2">
                                     <LayoutDashboard className="w-5 h-5 text-indigo-400" />
@@ -195,55 +232,65 @@ function App() {
 
                             {/* Top Stats Cards */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-indigo-500/30 transition-colors group">
+                                <div onClick={() => setActiveTab('cf')} className={`bg-slate-900 border ${activeTab === 'cf' ? 'border-indigo-500' : 'border-slate-800'} p-5 rounded-xl hover:border-indigo-500/50 transition-colors group cursor-pointer`}>
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-indigo-500/10 rounded-lg text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
                                             <TrendingUp className="w-5 h-5" />
                                         </div>
-                                        <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">+42 this week</span>
+                                        <div className="flex flex-col items-end">
+                                            <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">Codeforces</span>
+                                        </div>
                                     </div>
                                     <div className="text-3xl font-bold text-white mb-1">{data.cfRating || 'N/A'}</div>
-                                    <div className="text-sm text-slate-500">Codeforces Rating</div>
+                                    <div className="text-sm text-slate-500">{data.verdict}</div>
                                 </div>
-                                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-yellow-500/30 transition-colors group">
+
+                                <div onClick={() => setActiveTab('lc')} className={`bg-slate-900 border ${activeTab === 'lc' ? 'border-yellow-500' : 'border-slate-800'} p-5 rounded-xl hover:border-yellow-500/50 transition-colors group cursor-pointer`}>
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-yellow-500/10 rounded-lg text-yellow-400 group-hover:bg-yellow-500/20 transition-colors">
                                             <Code2 className="w-5 h-5" />
                                         </div>
-                                        <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">Top 5.2%</span>
+                                        <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">LeetCode</span>
                                     </div>
                                     <div className="text-3xl font-bold text-white mb-1">{data.lcRating}</div>
-                                    <div className="text-sm text-slate-500">LeetCode Rating</div>
+                                    <div className="text-sm text-slate-500">Global Ranking</div>
                                 </div>
-                                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-purple-500/30 transition-colors group">
+
+                                <div onClick={() => setActiveTab('cc')} className={`bg-slate-900 border ${activeTab === 'cc' ? 'border-purple-500' : 'border-slate-800'} p-5 rounded-xl hover:border-purple-500/50 transition-colors group cursor-pointer`}>
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400 group-hover:bg-purple-500/20 transition-colors">
-                                            <Award className="w-5 h-5" />
+                                            <Terminal className="w-5 h-5" />
                                         </div>
-                                        <span className="text-xs font-medium px-2 py-1 bg-purple-500/10 text-purple-400 rounded-full">Prognosis</span>
+                                        <span className="text-xs font-medium px-2 py-1 bg-purple-500/10 text-purple-400 rounded-full">CodeChef {data.ccStars}</span>
                                     </div>
-                                    <div className="text-3xl font-bold text-white mb-1">{data.verdict}</div>
-                                    <div className="text-sm text-slate-500">Predicted Rank</div>
+                                    <div className="text-3xl font-bold text-white mb-1">{data.ccRating || 'N/A'}</div>
+                                    <div className="text-sm text-slate-500">Current Rating</div>
                                 </div>
                             </div>
 
-                            {/* Main Content Grid */}
+                            {/* Main Content */}
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                                {/* Chart Section */}
                                 <div className="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-6">
                                     <div className="flex items-center justify-between mb-6">
-                                        <h3 className="font-semibold text-white">Rating Trajectory</h3>
+                                        <div className="flex items-center gap-4">
+                                            <h3 className="font-semibold text-white">Rating Trajectory</h3>
+                                            <div className="flex gap-2">
+                                                <button onClick={() => setActiveTab('cf')} className={`px-3 py-1 text-xs rounded-full border transition-colors ${activeTab === 'cf' ? 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20' : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-indigo-400'}`}>CF</button>
+                                                <button onClick={() => setActiveTab('cc')} className={`px-3 py-1 text-xs rounded-full border transition-colors ${activeTab === 'cc' ? 'bg-purple-500/10 text-purple-400 border-purple-500/20' : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-purple-400'}`}>CC</button>
+                                                <button onClick={() => setActiveTab('lc')} className={`px-3 py-1 text-xs rounded-full border transition-colors ${activeTab === 'lc' ? 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20' : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-yellow-400'}`}>LC</button>
+                                            </div>
+                                        </div>
                                         <select className="bg-slate-950 border border-slate-700 text-xs rounded-lg px-2 py-1 outline-none focus:border-indigo-500">
                                             <option>Last 15 Contests</option>
                                         </select>
                                     </div>
                                     <div className="h-[300px] w-full">
                                         <ResponsiveContainer width="100%" height="100%">
-                                            <AreaChart data={data.history}>
+                                            <AreaChart data={getCurrentChartData()}>
                                                 <defs>
-                                                    <linearGradient id="colorCf" x1="0" y1="0" x2="0" y2="1">
-                                                        <stop offset="5%" stopColor="#6366f1" stopOpacity={0.2} />
-                                                        <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
+                                                    <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="5%" stopColor={getChartColor()} stopOpacity={0.2} />
+                                                        <stop offset="95%" stopColor={getChartColor()} stopOpacity={0} />
                                                     </linearGradient>
                                                 </defs>
                                                 <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" vertical={false} />
@@ -253,13 +300,17 @@ function App() {
                                                     contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', fontSize: '12px' }}
                                                     itemStyle={{ color: '#e2e8f0' }}
                                                 />
-                                                <Area type="monotone" dataKey="rating" stroke="#6366f1" strokeWidth={2} fillOpacity={1} fill="url(#colorCf)" name="Rating" />
+                                                <Area type="monotone" dataKey="rating" stroke={getChartColor()} strokeWidth={2} fillOpacity={1} fill="url(#chartGradient)" name="Rating" />
                                             </AreaChart>
                                         </ResponsiveContainer>
+                                        {getCurrentChartData().length === 0 && (
+                                            <div className="absolute inset-0 flex items-center justify-center text-sm text-slate-500">
+                                                No history data available for {activeTab.toUpperCase()}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
-                                {/* Insights Column */}
                                 <div className="space-y-4">
                                     <div className="bg-gradient-to-br from-indigo-900/10 to-purple-900/10 border border-indigo-500/20 rounded-xl p-6 backdrop-blur-sm">
                                         <h3 className="font-semibold text-white mb-4 flex items-center gap-2">
@@ -268,25 +319,11 @@ function App() {
                                         </h3>
                                         <div className="space-y-4">
                                             <div className="text-sm leading-relaxed text-slate-300">
-                                                <p className="mb-2"><span className="text-indigo-400 font-medium">Strength:</span> Your graph theory problem solving is performing at <span className="text-white">Top 5%</span> level.</p>
-                                                <p><span className="text-indigo-400 font-medium">Focus:</span> Dynamic Programming consistency is inconsistent. Recommend <span className="text-white underline decoration-indigo-500/50 underline-offset-2">CSES Problem Set</span>.</p>
+                                                <p className="mb-2"><span className="text-indigo-400 font-medium">Strength:</span> Consistent improvement in ratings.</p>
                                             </div>
                                             <button className="w-full py-2 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 text-xs font-medium rounded-lg transition-colors border border-indigo-500/20">
                                                 View Detailed Report
                                             </button>
-                                        </div>
-                                    </div>
-
-                                    {/* Topic Tags Pills (Mock) */}
-                                    <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-                                        <h3 className="font-semibold text-white mb-4 text-sm">Strongest Topics</h3>
-                                        <div className="flex flex-wrap gap-2">
-                                            {data.topTags.map((tag) => (
-                                                <span key={tag} className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-full border border-slate-700 transition-colors cursor-default">
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                            <span className="px-3 py-1 bg-slate-800/50 text-slate-500 text-xs rounded-full border border-slate-800/50 border-dashed">+4 more</span>
                                         </div>
                                     </div>
                                 </div>
