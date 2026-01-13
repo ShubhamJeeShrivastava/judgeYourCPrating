@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { Search, Code2, TrendingUp, Zap, Award, BarChart3, ArrowRight, LayoutDashboard, User, Terminal } from 'lucide-react';
+import axios from 'axios';
 
 function App() {
     const [cfId, setCfId] = useState('')
@@ -9,6 +10,7 @@ function App() {
     const [ccId, setCcId] = useState('')
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -17,23 +19,52 @@ function App() {
             return
         }
         setLoading(true)
-        // Mock API call
-        await new Promise(r => setTimeout(r, 1500));
-        const mockHistory = Array.from({ length: 15 }, (_, i) => ({
-            name: `C ${i + 1}`,
-            rating: 1200 + Math.floor(Math.random() * 400) + (i * 20),
-            lcRating: 1500 + Math.floor(Math.random() * 200) + (i * 10)
-        }));
+        setError(null)
 
-        setData({
-            message: "Data Loaded",
-            history: mockHistory,
-            cfRating: 1650,
-            lcRating: 1840,
-            verdict: "Strong Specialist",
-            topTags: ["DP", "Graphs", "Greedy"]
-        })
-        setLoading(false)
+        try {
+            const response = await axios.post('http://localhost:5001/api/analyze', {
+                cfId,
+                lcId,
+                ccId
+            });
+
+            const result = response.data;
+
+            // Transform backend data to frontend format
+            // Primarily using Codeforces data for now as others are placeholders
+            if (result.cf && result.cf.status === 'success') {
+                const cfData = result.cf;
+
+                // Transform history for graph
+                const history = cfData.history.map(h => ({
+                    name: h.contestName, // Simplified for chart
+                    rating: h.newRating,
+                    date: new Date(h.updateTime * 1000).toLocaleDateString()
+                })).slice(-15); // Show last 15 contests
+
+                setData({
+                    message: "Data Loaded",
+                    history: history,
+                    cfRating: cfData.rating,
+                    lcRating: "N/A", // Placeholder
+                    verdict: getVerdict(cfData.maxRank),
+                    topTags: ["Implementation", "Math", "Greedy"] // Mock tags for now as API doesn't return them directly in this endpoint
+                });
+            } else {
+                setError("Could not fetch data for the provided handles.");
+            }
+
+        } catch (err) {
+            console.error(err);
+            setError("Failed to connect to the server. Please check if the backend is running on port 5001.");
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const getVerdict = (rank) => {
+        if (!rank) return "Unrated";
+        return rank.charAt(0).toUpperCase() + rank.slice(1);
     }
 
     return (
@@ -142,6 +173,7 @@ function App() {
                             {loading ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <><Search className="w-4 h-4" /> {data ? 'Update' : 'Analyze'}</>}
                         </button>
                     </form>
+                    {error && <div className="text-red-400 text-sm mt-2 text-center w-full px-4">{error}</div>}
                 </motion.div>
 
                 {/* Dashboard Grid */}
@@ -170,7 +202,7 @@ function App() {
                                         </div>
                                         <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">+42 this week</span>
                                     </div>
-                                    <div className="text-3xl font-bold text-white mb-1">{data.cfRating}</div>
+                                    <div className="text-3xl font-bold text-white mb-1">{data.cfRating || 'N/A'}</div>
                                     <div className="text-sm text-slate-500">Codeforces Rating</div>
                                 </div>
                                 <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-yellow-500/30 transition-colors group">
@@ -202,8 +234,7 @@ function App() {
                                     <div className="flex items-center justify-between mb-6">
                                         <h3 className="font-semibold text-white">Rating Trajectory</h3>
                                         <select className="bg-slate-950 border border-slate-700 text-xs rounded-lg px-2 py-1 outline-none focus:border-indigo-500">
-                                            <option>Last 6 Months</option>
-                                            <option>All Time</option>
+                                            <option>Last 15 Contests</option>
                                         </select>
                                     </div>
                                     <div className="h-[300px] w-full">
