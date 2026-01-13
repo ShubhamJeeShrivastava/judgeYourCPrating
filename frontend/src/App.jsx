@@ -87,6 +87,7 @@ function App() {
             // Set Default Tab
             if (cfData?.status === 'success') setActiveTab('cf');
             else if (ccData?.status === 'success') setActiveTab('cc');
+            else if (lcData?.status === 'success') setActiveTab('lc');
 
         } catch (err) {
             console.error(err);

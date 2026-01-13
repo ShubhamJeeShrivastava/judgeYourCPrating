@@ -185,3 +185,22 @@
 [2026-01-13T17:51:14.146Z] Received request: CF=, CC=, LC=neal_wu
 [2026-01-13T17:51:14.147Z] Fetching LeetCode data for: neal_wu
 [2026-01-13T17:51:15.157Z] Sending response to frontend
+[2026-01-13T17:57:41.864Z] Received request: CF=shubhamjee, CC=, LC=
+[2026-01-13T17:57:41.865Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T17:57:43.883Z] Sending response to frontend
+[2026-01-13T17:57:53.122Z] Received request: CF=shubhamjee, CC=, LC=neal_wu
+[2026-01-13T17:57:53.122Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T17:57:55.030Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:57:55.613Z] Sending response to frontend
+[2026-01-13T17:58:14.844Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:58:14.844Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:58:15.605Z] Sending response to frontend
+[2026-01-13T17:59:47.058Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:59:47.058Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:59:47.574Z] Sending response to frontend
+[2026-01-13T17:59:48.003Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:59:48.004Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:59:49.204Z] Sending response to frontend
+[2026-01-13T18:00:09.780Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T18:00:09.781Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T18:00:10.819Z] Sending response to frontend
