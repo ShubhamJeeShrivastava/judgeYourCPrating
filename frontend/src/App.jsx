@@ -237,7 +237,15 @@ function App() {
 
                             {/* Top Stats Cards */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div onClick={() => setActiveTab('cf')} className={`bg-slate-900 border ${activeTab === 'cf' ? 'border-indigo-500' : 'border-slate-800'} p-5 rounded-xl hover:border-indigo-500/50 transition-colors group cursor-pointer`}>
+                                {/* Codeforces Card */}
+                                <div
+                                    onClick={() => setActiveTab('cf')}
+                                    className={`
+                                        bg-slate-900 border p-5 rounded-xl transition-all duration-300 group cursor-pointer relative overflow-hidden
+                                        ${activeTab === 'cf' ? 'border-indigo-500' : 'border-slate-800'}
+                                        ${(!data.cfRating || data.cfRating === 'N/A') ? 'opacity-40 scale-90 hover:opacity-100 hover:scale-100' : 'hover:border-indigo-500/50'}
+                                    `}
+                                >
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-indigo-500/10 rounded-lg text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
                                             <TrendingUp className="w-5 h-5" />
@@ -250,7 +258,15 @@ function App() {
                                     <div className="text-sm text-slate-500">{data.verdict}</div>
                                 </div>
 
-                                <div onClick={() => setActiveTab('lc')} className={`bg-slate-900 border ${activeTab === 'lc' ? 'border-yellow-500' : 'border-slate-800'} p-5 rounded-xl hover:border-yellow-500/50 transition-colors group cursor-pointer`}>
+                                {/* LeetCode Card */}
+                                <div
+                                    onClick={() => setActiveTab('lc')}
+                                    className={`
+                                        bg-slate-900 border p-5 rounded-xl transition-all duration-300 group cursor-pointer relative overflow-hidden
+                                        ${activeTab === 'lc' ? 'border-yellow-500' : 'border-slate-800'}
+                                        ${(!data.lcRating || data.lcRating === 'N/A') ? 'opacity-40 scale-90 hover:opacity-100 hover:scale-100' : 'hover:border-yellow-500/50'}
+                                    `}
+                                >
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-yellow-500/10 rounded-lg text-yellow-400 group-hover:bg-yellow-500/20 transition-colors">
                                             <Code2 className="w-5 h-5" />
@@ -261,7 +277,15 @@ function App() {
                                     <div className="text-sm text-slate-500">{data.lcRank}</div>
                                 </div>
 
-                                <div onClick={() => setActiveTab('cc')} className={`bg-slate-900 border ${activeTab === 'cc' ? 'border-purple-500' : 'border-slate-800'} p-5 rounded-xl hover:border-purple-500/50 transition-colors group cursor-pointer`}>
+                                {/* CodeChef Card */}
+                                <div
+                                    onClick={() => setActiveTab('cc')}
+                                    className={`
+                                        bg-slate-900 border p-5 rounded-xl transition-all duration-300 group cursor-pointer relative overflow-hidden
+                                        ${activeTab === 'cc' ? 'border-purple-500' : 'border-slate-800'}
+                                        ${(!data.ccRating || data.ccRating === 'N/A') ? 'opacity-40 scale-90 hover:opacity-100 hover:scale-100' : 'hover:border-purple-500/50'}
+                                    `}
+                                >
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-2 bg-purple-500/10 rounded-lg text-purple-400 group-hover:bg-purple-500/20 transition-colors">
                                             <Terminal className="w-5 h-5" />
