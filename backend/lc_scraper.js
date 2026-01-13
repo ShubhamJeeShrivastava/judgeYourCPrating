@@ -14,6 +14,15 @@ async function getLeetCodeStats(username) {
                     rating
                     globalRanking
                 }
+                userContestRankingHistory(username: $username) {
+                    attended
+                    rating
+                    ranking
+                    contest {
+                        title
+                        startTime
+                    }
+                }
             }
         `;
 
@@ -29,14 +38,23 @@ async function getLeetCodeStats(username) {
         }
 
         const contestRanking = data.userContestRanking || {};
+        const history = data.userContestRankingHistory || [];
+
+        const attendedHistory = history
+            .filter(h => h.attended)
+            .map(h => ({
+                contestName: h.contest.title,
+                rating: Math.round(h.rating),
+                ranking: h.ranking,
+                startTime: h.contest.startTime
+            }));
 
         return {
             status: 'success',
             handle: data.matchedUser.username,
             rating: contestRanking.rating ? Math.round(contestRanking.rating) : 'N/A',
             globalRanking: contestRanking.globalRanking || 'N/A',
-            // No history in public API easily, simplistic version for now
-            history: []
+            history: attendedHistory
         };
 
     } catch (error) {

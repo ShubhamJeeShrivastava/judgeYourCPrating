@@ -1,0 +1,166 @@
+Testing LeetCode Scraper RE-RUN...
+Testing handle: Shubham_Jee_Shrivastava
+Result for 'Shubham_Jee_Shrivastava': {
+  "status": "success",
+  "handle": "Shubham_Jee_Shrivastava",
+  "rating": 1895,
+  "globalRanking": 34836,
+  "history": [
+    {
+      "contestName": "Biweekly Contest 136",
+      "rating": 1605,
+      "ranking": 5338,
+      "startTime": 1722695400
+    },
+    {
+      "contestName": "Weekly Contest 409",
+      "rating": 1590,
+      "ranking": 12933,
+      "startTime": 1722738600
+    },
+    {
+      "contestName": "Weekly Contest 410",
+      "rating": 1595,
+      "ranking": 10741,
+      "startTime": 1723343400
+    },
+    {
+      "contestName": "Biweekly Contest 137",
+      "rating": 1648,
+      "ranking": 3867,
+      "startTime": 1723905000
+    },
+    {
+      "contestName": "Biweekly Contest 138",
+      "rating": 1654,
+      "ranking": 9166,
+      "startTime": 1725114600
+    },
+    {
+      "contestName": "Weekly Contest 413",
+      "rating": 1665,
+      "ranking": 7685,
+      "startTime": 1725157800
+    },
+    {
+      "contestName": "Weekly Contest 415",
+      "rating": 1666,
+      "ranking": 9322,
+      "startTime": 1726367400
+    },
+    {
+      "contestName": "Biweekly Contest 140",
+      "rating": 1757,
+      "ranking": 665,
+      "startTime": 1727533800
+    },
+    {
+      "contestName": "Weekly Contest 426",
+      "rating": 1792,
+      "ranking": 1968,
+      "startTime": 1733020200
+    },
+    {
+      "contestName": "Biweekly Contest 145",
+      "rating": 1791,
+      "ranking": 4462,
+      "startTime": 1733581800
+    },
+    {
+      "contestName": "Weekly Contest 427",
+      "rating": 1791,
+      "ranking": 4524,
+      "startTime": 1733625000
+    },
+    {
+      "contestName": "Biweekly Contest 146",
+      "rating": 1790,
+      "ranking": 5179,
+      "startTime": 1734791400
+    },
+    {
+      "contestName": "Weekly Contest 429",
+      "rating": 1808,
+      "ranking": 2797,
+      "startTime": 1734834600
+    },
+    {
+      "contestName": "Weekly Contest 432",
+      "rating": 1831,
+      "ranking": 2511,
+      "startTime": 1736649000
+    },
+    {
+      "contestName": "Biweekly Contest 148",
+      "rating": 1829,
+      "ranking": 5470,
+      "startTime": 1737210600
+    },
+    {
+      "contestName": "Weekly Contest 433",
+      "rating": 1791,
+      "ranking": 12049,
+      "startTime": 1737253800
+    },
+    {
+      "contestName": "Biweekly Contest 151",
+      "rating": 1812,
+      "ranking": 2878,
+      "startTime": 1740839400
+    },
+    {
+      "contestName": "Weekly Contest 439",
+      "rating": 1833,
+      "ranking": 2561,
+      "startTime": 1740882600
+    },
+    {
+      "contestName": "Biweekly Contest 154",
+      "rating": 1848,
+      "ranking": 2818,
+      "startTime": 1744468200
+    },
+    {
+      "contestName": "Biweekly Contest 155",
+      "rating": 1809,
+      "ranking": 10580,
+      "startTime": 1745677800
+    },
+    {
+      "contestName": "Weekly Contest 450",
+      "rating": 1836,
+      "ranking": 1992,
+      "startTime": 1747535400
+    },
+    {
+      "contestName": "Weekly Contest 452",
+      "rating": 1819,
+      "ranking": 6695,
+      "startTime": 1748745000
+    },
+    {
+      "contestName": "Weekly Contest 455",
+      "rating": 1852,
+      "ranking": 1620,
+      "startTime": 1750559400
+    },
+    {
+      "contestName": "Weekly Contest 475",
+      "rating": 1843,
+      "ranking": 5552,
+      "startTime": 1762655400
+    },
+    {
+      "contestName": "Biweekly Contest 171",
+      "rating": 1835,
+      "ranking": 5188,
+      "startTime": 1765031400
+    },
+    {
+      "contestName": "Biweekly Contest 172",
+      "rating": 1895,
+      "ranking": 591,
+      "startTime": 1766241000
+    }
+  ]
+}

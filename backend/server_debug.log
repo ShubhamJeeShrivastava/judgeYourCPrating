@@ -37,3 +37,151 @@
   "st...
 [2026-01-13T13:30:00.366Z] Successfully parsed JSON
 [2026-01-13T13:30:00.367Z] Sending response to frontend
+[2026-01-13T13:45:35.539Z] Received request: CF=, CC=codef, LC=
+[2026-01-13T13:45:35.539Z] Fetching CodeChef data for: codef
+[2026-01-13T13:45:35.539Z] Spawning python cc_scraper.py for codef
+[2026-01-13T13:45:37.544Z] Python process exited with code 0
+[2026-01-13T13:45:37.544Z] Python Output Preview: {
+  "status": "error",
+  "message": "User not found or no rating"
+}
+...
+[2026-01-13T13:45:37.545Z] Successfully parsed JSON
+[2026-01-13T13:45:37.545Z] Sending response to frontend
+[2026-01-13T13:46:32.553Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T13:46:32.553Z] Sending response to frontend
+[2026-01-13T13:46:42.016Z] Received request: CF=, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T13:46:42.016Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T13:46:42.016Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T13:46:43.934Z] Python process exited with code 0
+[2026-01-13T13:46:43.934Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T13:46:43.935Z] Successfully parsed JSON
+[2026-01-13T13:46:43.935Z] Sending response to frontend
+[2026-01-13T13:46:56.665Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T13:46:56.665Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T13:46:58.103Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T13:46:58.104Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T13:46:59.989Z] Python process exited with code 0
+[2026-01-13T13:46:59.989Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T13:46:59.990Z] Successfully parsed JSON
+[2026-01-13T13:46:59.990Z] Sending response to frontend
+[2026-01-13T14:33:49.499Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T14:33:49.499Z] Sending response to frontend
+[2026-01-13T14:34:15.431Z] Received request: CF=shubhamjee, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T14:34:15.431Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T14:34:16.653Z] Sending response to frontend
+[2026-01-13T14:34:20.248Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T14:34:20.248Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T14:34:21.082Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T14:34:21.083Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T14:34:23.336Z] Python process exited with code 0
+[2026-01-13T14:34:23.337Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T14:34:23.337Z] Successfully parsed JSON
+[2026-01-13T14:34:23.337Z] Sending response to frontend
+[2026-01-13T14:34:27.549Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T14:34:27.549Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T14:34:28.658Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T14:34:28.659Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T14:34:30.424Z] Python process exited with code 0
+[2026-01-13T14:34:30.424Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T14:34:30.424Z] Successfully parsed JSON
+[2026-01-13T14:34:30.425Z] Sending response to frontend
+[2026-01-13T16:32:58.242Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T16:32:58.242Z] Sending response to frontend
+[2026-01-13T16:34:00.463Z] Server running on http://localhost:5001
+[2026-01-13T16:34:43.969Z] Received request: CF=undefined, CC=undefined, LC=neal_wu
+[2026-01-13T16:34:43.970Z] Sending response to frontend
+[2026-01-13T16:42:21.929Z] Server running on http://localhost:5001
+[2026-01-13T16:44:34.644Z] Server running on http://localhost:5001
+[2026-01-13T16:46:41.667Z] Server running on http://localhost:5001
+[2026-01-13T16:47:07.849Z] Server running on http://localhost:5001
+[2026-01-13T16:47:16.718Z] Received request: CF=undefined, CC=undefined, LC=neal_wu
+[2026-01-13T16:47:16.719Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T16:47:17.756Z] Sending response to frontend
+[2026-01-13T16:48:45.902Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T16:48:45.903Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T16:48:46.403Z] Sending response to frontend
+[2026-01-13T16:51:49.604Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T16:51:49.605Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T16:51:50.370Z] Sending response to frontend
+[2026-01-13T16:51:51.244Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T16:51:51.244Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T16:51:51.621Z] Sending response to frontend
+[2026-01-13T16:52:47.907Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T16:52:47.907Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T16:52:48.474Z] Sending response to frontend
+[2026-01-13T16:52:49.971Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T16:52:49.971Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T16:52:50.389Z] Sending response to frontend
+[2026-01-13T16:52:51.028Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T16:52:51.028Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T16:52:51.654Z] Sending response to frontend
+[2026-01-13T16:52:56.240Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T16:52:56.240Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T16:52:56.611Z] Sending response to frontend
+[2026-01-13T16:53:47.967Z] Server running on http://localhost:5001
+[2026-01-13T16:53:50.917Z] Received request: CF=undefined, CC=undefined, LC=Shubham_Jee_Shrivastava
+[2026-01-13T16:53:50.917Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T16:53:51.734Z] Sending response to frontend
+[2026-01-13T17:01:45.390Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:01:45.390Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:01:46.116Z] Sending response to frontend
+[2026-01-13T17:02:06.717Z] Received request: CF=, CC=, LC=Shubham_Jee_Shrivastava
+[2026-01-13T17:02:06.718Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T17:02:07.212Z] Sending response to frontend
+[2026-01-13T17:02:23.449Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T17:02:23.450Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T17:02:25.037Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T17:02:25.038Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T17:02:28.753Z] Python process exited with code 0
+[2026-01-13T17:02:28.753Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T17:02:28.754Z] Successfully parsed JSON
+[2026-01-13T17:02:28.754Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T17:02:29.892Z] Sending response to frontend
+[2026-01-13T17:32:41.146Z] Server running on http://localhost:5001
+[2026-01-13T17:33:21.104Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:33:21.105Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:33:21.838Z] Sending response to frontend
+[2026-01-13T17:33:40.285Z] Received request: CF=neal_wu, CC=, LC=neal_wu
+[2026-01-13T17:33:40.285Z] Fetching Codeforces data for: neal_wu
+[2026-01-13T17:33:41.107Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:33:42.143Z] Sending response to frontend
+[2026-01-13T17:33:43.997Z] Received request: CF=neal_wu, CC=, LC=neal_wu
+[2026-01-13T17:33:43.998Z] Fetching Codeforces data for: neal_wu
+[2026-01-13T17:33:45.363Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:33:46.372Z] Sending response to frontend
+[2026-01-13T17:33:52.038Z] Received request: CF=neal_wu, CC=, LC=
+[2026-01-13T17:33:52.039Z] Fetching Codeforces data for: neal_wu
+[2026-01-13T17:33:52.662Z] Sending response to frontend
+[2026-01-13T17:34:00.129Z] Received request: CF=neal_wu, CC=, LC=neal_wu
+[2026-01-13T17:34:00.130Z] Fetching Codeforces data for: neal_wu
+[2026-01-13T17:34:01.211Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:34:02.216Z] Sending response to frontend
+[2026-01-13T17:51:14.146Z] Received request: CF=, CC=, LC=neal_wu
+[2026-01-13T17:51:14.147Z] Fetching LeetCode data for: neal_wu
+[2026-01-13T17:51:15.157Z] Sending response to frontend

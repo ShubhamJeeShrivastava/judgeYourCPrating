@@ -34,6 +34,7 @@ function App() {
             const result = response.data;
             const cfData = result.cf;
             const ccData = result.cc;
+            const lcData = result.lc;
 
             let historyCf = [];
             let historyCc = [];
@@ -56,18 +57,29 @@ function App() {
                 })).slice(-15);
             }
 
+            // Process LC History
+            let historyLc = [];
+            if (lcData && lcData.status === 'success' && lcData.history) {
+                historyLc = lcData.history.map(h => ({
+                    name: h.contestName,
+                    rating: h.rating,
+                    date: new Date(h.startTime * 1000).toLocaleDateString()
+                })).slice(-15);
+            }
+
             // Set Data
             setData({
                 message: "Data Loaded",
                 history: {
                     cf: historyCf,
                     cc: historyCc,
-                    lc: [] // Placeholder
+                    lc: historyLc
                 },
                 cfRating: cfData?.status === 'success' ? cfData.rating : 'N/A',
                 ccRating: ccData?.status === 'success' ? ccData.rating : 'N/A',
                 ccStars: ccData?.status === 'success' ? ccData.stars : '',
-                lcRating: "N/A", // Placeholder
+                lcRating: lcData?.status === 'success' ? lcData.rating : 'N/A',
+                lcRank: lcData?.status === 'success' ? `Global Rank: ${lcData.globalRanking}` : 'Unrated',
                 verdict: getVerdict(cfData?.maxRank),
                 topTags: ["Implementation", "Math", "Greedy"]
             });
@@ -253,7 +265,7 @@ function App() {
                                         <span className="text-xs font-medium px-2 py-1 bg-green-500/10 text-green-400 rounded-full">LeetCode</span>
                                     </div>
                                     <div className="text-3xl font-bold text-white mb-1">{data.lcRating}</div>
-                                    <div className="text-sm text-slate-500">Global Ranking</div>
+                                    <div className="text-sm text-slate-500">{data.lcRank}</div>
                                 </div>
 
                                 <div onClick={() => setActiveTab('cc')} className={`bg-slate-900 border ${activeTab === 'cc' ? 'border-purple-500' : 'border-slate-800'} p-5 rounded-xl hover:border-purple-500/50 transition-colors group cursor-pointer`}>

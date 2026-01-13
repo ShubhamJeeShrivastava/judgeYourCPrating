@@ -1,0 +1,34 @@
+Testing Server LeetCode Endpoint...
+Server Test Failed: connect ECONNREFUSED ::1:5001
+Testing Server LeetCode Endpoint...
+Response Status: 200
+Response Data: {
+  "lc": {
+    "message": "LeetCode disabled",
+    "handle": "neal_wu"
+  }
+}
+Testing Server LeetCode Endpoint...
+Server Test Failed: connect ECONNREFUSED 127.0.0.1:5001
+Testing Server LeetCode Endpoint...
+Response Status: 200
+Response Data: {
+  "lc": {
+    "status": "success",
+    "handle": "neal_wu",
+    "rating": 3686,
+    "globalRanking": 2,
+    "history": []
+  }
+}
+Testing Server LeetCode Endpoint...
+Response Status: 200
+Response Data: {
+  "lc": {
+    "status": "success",
+    "handle": "Shubham_Jee_Shrivastava",
+    "rating": 1895,
+    "globalRanking": 34836,
+    "history": []
+  }
+}

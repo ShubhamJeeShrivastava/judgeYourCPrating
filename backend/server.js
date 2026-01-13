@@ -3,6 +3,7 @@ const cors = require('cors');
 const { spawn } = require('child_process');
 const fs = require('fs');
 const { getUserStats } = require('./cf_scraper');
+const { getLeetCodeStats } = require('./lc_scraper');
 
 const app = express();
 const PORT = 5001;
@@ -92,9 +93,10 @@ app.post('/api/analyze', async (req, res) => {
             }
         }
 
-        // LeetCode removed per user request
         if (lcId) {
-            results.lc = { message: "LeetCode disabled", handle: lcId };
+            log(`Fetching LeetCode data for: ${lcId}`);
+            const lcData = await getLeetCodeStats(lcId);
+            results.lc = lcData;
         }
 
         log("Sending response to frontend");
