@@ -1,16 +1,21 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
-import { Search, Code2, TrendingUp, Zap, Award, BarChart3, ArrowRight, LayoutDashboard, User } from 'lucide-react';
+import { Search, Code2, TrendingUp, Zap, Award, BarChart3, ArrowRight, LayoutDashboard, User, Terminal } from 'lucide-react';
 
 function App() {
     const [cfId, setCfId] = useState('')
     const [lcId, setLcId] = useState('')
+    const [ccId, setCcId] = useState('')
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        if (!cfId && !lcId && !ccId) {
+            alert("Please enter at least one User ID")
+            return
+        }
         setLoading(true)
         // Mock API call
         await new Promise(r => setTimeout(r, 1500));
@@ -86,11 +91,12 @@ function App() {
                         w-full mx-auto backdrop-blur-sm border border-slate-800 shadow-2xl bg-slate-900/50 rounded-2xl
                         ${data
                             ? 'max-w-full flex-row p-4 mb-8 sticky top-20 z-40' // Compact State
-                            : 'max-w-2xl p-2 mb-16' // Hero State
+                            : 'max-w-3xl p-2 mb-16' // Hero State (wider for 3 inputs)
                         }
                     `}
                 >
                     <form onSubmit={handleSubmit} className={`flex gap-2 ${data ? 'flex-row items-center w-full' : 'flex-col md:flex-row'}`}>
+                        {/* Codeforces Input */}
                         <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
                             <User className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
                             <input
@@ -101,6 +107,8 @@ function App() {
                                 className={`w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 text-white focus:outline-none focus:border-indigo-500/50 transition-colors ${data ? 'py-2 text-sm' : 'py-3'}`}
                             />
                         </div>
+
+                        {/* LeetCode Input */}
                         <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
                             <Code2 className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
                             <input
@@ -111,11 +119,24 @@ function App() {
                                 className={`w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 text-white focus:outline-none focus:border-indigo-500/50 transition-colors ${data ? 'py-2 text-sm' : 'py-3'}`}
                             />
                         </div>
+
+                        {/* CodeChef Input */}
+                        <div className={`relative group ${data ? 'w-48' : 'flex-1'}`}>
+                            <Terminal className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors`} />
+                            <input
+                                type="text"
+                                value={ccId}
+                                onChange={(e) => setCcId(e.target.value)}
+                                placeholder="CodeChef Handle"
+                                className={`w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 text-white focus:outline-none focus:border-indigo-500/50 transition-colors ${data ? 'py-2 text-sm' : 'py-3'}`}
+                            />
+                        </div>
+
                         <button
                             disabled={loading}
                             className={`
                                 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition-all flex items-center justify-center gap-2 whitespace-nowrap shadow-lg shadow-indigo-600/20 disabled:opacity-70
-                                ${data ? 'px-4 py-2 text-sm ml-auto' : 'px-8 py-3'}
+                                ${data ? 'px-4 py-2 text-sm ml-auto' : 'px-8 py-3 w-full md:w-auto'}
                             `}
                         >
                             {loading ? <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <><Search className="w-4 h-4" /> {data ? 'Update' : 'Analyze'}</>}
