@@ -120,23 +120,15 @@ function App() {
         <div className="min-h-screen bg-[#0B1120] text-slate-300 font-sans selection:bg-indigo-500/30 overflow-x-hidden">
             {/* Navbar */}
             <nav className="sticky top-0 z-50 border-b border-slate-800 bg-[#0B1120]/80 backdrop-blur-md">
-                <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+                <div className="w-full px-6 h-12 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <div className="p-1.5 bg-indigo-600 rounded-lg">
-                            <Zap className="w-5 h-5 text-white" />
+                            <Zap className="w-4 h-4 text-white" />
                         </div>
                         <span className="text-white font-bold text-lg tracking-tight">JudgeCP</span>
                     </div>
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-                        <a href="#" className="text-white hover:text-indigo-400 transition-colors">Dashboard</a>
-                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">Compare</a>
-                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors">Resources</a>
-                    </div>
                     <div className="flex items-center gap-4">
-                        <button className="hidden md:block px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">Sign In</button>
-                        <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium rounded-md transition-all shadow-lg shadow-indigo-500/20">
-                            Get Started
-                        </button>
+                        <button className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">Sign In</button>
                     </div>
                 </div>
             </nav>

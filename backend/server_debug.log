@@ -255,3 +255,59 @@
 [2026-01-13T18:11:54.752Z] Successfully parsed JSON
 [2026-01-13T18:11:54.752Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
 [2026-01-13T18:11:55.405Z] Sending response to frontend
+[2026-01-13T18:40:46.087Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T18:40:46.087Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T18:40:47.026Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T18:40:47.026Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T18:40:49.285Z] Python process exited with code 0
+[2026-01-13T18:40:49.286Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T18:40:49.287Z] Successfully parsed JSON
+[2026-01-13T18:40:49.287Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T18:40:49.914Z] Sending response to frontend
+[2026-01-13T18:45:18.374Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T18:45:18.375Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T18:45:19.447Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T18:45:19.448Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T18:45:21.220Z] Python process exited with code 0
+[2026-01-13T18:45:21.221Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T18:45:21.222Z] Successfully parsed JSON
+[2026-01-13T18:45:21.222Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T18:45:21.745Z] Sending response to frontend
+[2026-01-13T19:23:45.501Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T19:23:45.503Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T19:23:46.614Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T19:23:46.615Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T19:23:49.357Z] Python process exited with code 0
+[2026-01-13T19:23:49.358Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T19:23:49.359Z] Successfully parsed JSON
+[2026-01-13T19:23:49.359Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T19:23:49.976Z] Sending response to frontend
+[2026-01-13T19:23:51.127Z] Received request: CF=shubhamjee, CC=shubhamjee, LC=Shubham_Jee_Shrivastava
+[2026-01-13T19:23:51.127Z] Fetching Codeforces data for: shubhamjee
+[2026-01-13T19:23:52.099Z] Fetching CodeChef data for: shubhamjee
+[2026-01-13T19:23:52.100Z] Spawning python cc_scraper.py for shubhamjee
+[2026-01-13T19:23:54.158Z] Python process exited with code 0
+[2026-01-13T19:23:54.159Z] Python Output Preview: {
+  "status": "success",
+  "handle": "shubhamjee",
+  "rating": 1781,
+  "maxRating": 1810,
+  "st...
+[2026-01-13T19:23:54.160Z] Successfully parsed JSON
+[2026-01-13T19:23:54.160Z] Fetching LeetCode data for: Shubham_Jee_Shrivastava
+[2026-01-13T19:23:54.538Z] Sending response to frontend
